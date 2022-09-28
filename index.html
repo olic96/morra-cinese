@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Morra Cinese</title>
+</head>
+<body>
+<!-- punteggio -->
+    <header class="points">
+        <div class="player_pt">
+            <h2>Player</h2><p>0</p>
+        </div>
+
+        <div class="cpu_pt">
+            <h2>CPU</h2><p>0</p>
+        </div>
+    </header>
+<!-- sezione di inizio gioco -->
+    <section class="game">
+        <div class="start">
+            <h1>Carta - Forbici - Sasso</h1>
+            <button>Inizia</button>
+        </div>
+ <!-- sezione vs -->
+        <div class="vs gameout">
+            <h2 class="ps_win">Carta, Forbici o Sasso?</h2>
+            <div class="check">
+                <button class="paper">paper</button>
+                <button class="scissors">scissors</button>
+                <button class="rock">rock</button>
+            </div>
+            <div class="launch">
+                <img class="player_game" src="paper.png">
+                <img class="cpu_game" src="paper.png">
+            </div>
+        </div>
+
+        <div class="ps_winend gameout">
+            <h1 class="ps_win_stop"></h1>
+            <button>Rinizia</button>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
