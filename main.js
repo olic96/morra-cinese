@@ -1,5 +1,11 @@
+playerName = prompt('Inserisci il tuo nome');
+
+while(!playerName) {
+   playerName = prompt('Inserisci il tuo nome');
+ };
+
 game = function() {
-    playerName = prompt('Inserisci il tuo nome');
+    
     document.getElementById('player_name').innerHTML = playerName;
 
     playerPT = 0;
