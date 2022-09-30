@@ -1,4 +1,7 @@
 game = function() {
+    playerName = prompt('Inserisci il tuo nome');
+    document.getElementById('player_name').innerHTML = playerName;
+
     playerPT = 0;
     cpuPT = 0;
 
@@ -14,18 +17,18 @@ game = function() {
         });
     };
 
-    playvs = function() {
+    playVs = function() {
         check = document.querySelectorAll('.check button');
         launch = document.querySelectorAll('.launch img');
         playerHand = document.querySelector('.player_game');
         cpuHand = document.querySelector('.cpu_game');
 
-        cpucheck = ['rock','paper','scissors'];
+        cpuCheck = ['rock', 'paper', 'scissors'];
 
         check.forEach((opt1) => {
             opt1.addEventListener('click', function() {
                 cpuNumber = Math.floor(Math.random()*3); 
-                cpuChoice = cpucheck[cpuNumber];
+                cpuChoice = cpuCheck[cpuNumber];
 
                 setTimeout(() => {
                     compareLaunch(this.textContent, cpuChoice);
@@ -47,7 +50,7 @@ game = function() {
 
         if(playerChoice === 'rock') {
             if(cpuChoice === 'scissors') {
-                ps_win.textContent = 'Player ha Vinto!';
+                ps_win.textContent = `${playerName} hai vinto!`;
                 playerPT++;
                 endGame();
                 updateScore();
@@ -69,7 +72,7 @@ game = function() {
                 updateScore();
                 return;
             } else {
-                ps_win.textContent = 'Player ha Vinto!';
+                ps_win.textContent = `${playerName} hai vinto!`;
                 playerPT++;
                 endGame();
                 updateScore();
@@ -85,7 +88,7 @@ game = function() {
                 updateScore();
                 return;
             } else {
-                ps_win.textContent = 'Player ha Vinto!';
+                ps_win.textContent = `${playerName} hai vinto!`;
                 playerPT++;
                 endGame();
                 updateScore();
@@ -120,7 +123,7 @@ game = function() {
             setTimeout(() => {
                 ps_winend.classList.add('gamein');
                 ps_winend.classList.remove('gameout');
-                ps_win_stop.textContent = 'Player ha vinto la partita!';
+                ps_win_stop.textContent = `${playerName} hai vinto la partita!`;
             }, 1000);
         } else if (cpuPT === 5) {
             vs.classList.remove('gamein');
@@ -134,6 +137,6 @@ game = function() {
     };
 
     startGame();
-    playvs();
+    playVs();
 }
 game();
