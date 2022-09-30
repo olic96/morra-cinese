@@ -35,7 +35,7 @@ game = function() {
 
                     playerHand.src = `${this.textContent}.png`;
                     cpuHand.src = `${cpuChoice}.png`;
-                }, 1000);
+                }, 100);
             });
         });
     };
@@ -124,7 +124,7 @@ game = function() {
                 ps_winend.classList.add('gamein');
                 ps_winend.classList.remove('gameout');
                 ps_win_stop.textContent = `${playerName} hai vinto la partita!`;
-            }, 1000);
+            }, 100);
         } else if (cpuPT === 5) {
             vs.classList.remove('gamein');
             vs.classList.add('gameout');
@@ -132,7 +132,7 @@ game = function() {
                 ps_winend.classList.add('gamein');
                 ps_winend.classList.remove('gameout');
                 ps_win_stop.textContent = 'CPU ha vinto la partita!';
-            }, 1000);
+            }, 100);
         }
     };
 
