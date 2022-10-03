@@ -50,6 +50,11 @@ section {
     background: black;
     font-size: 25px;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.start button:hover {
+    border: 1px solid white;
 }
 
 .vs {
@@ -86,6 +91,11 @@ section {
     background: black;
     border: 0;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.vs button:hover {
+    border: 1px solid white;
 }
 
 .player_game {
@@ -114,6 +124,11 @@ section {
     background: black;
     font-size: 25px;
     border-radius: 10px; 
+    cursor: pointer;
+}
+
+.ps_winend button:hover {
+    border: 1px solid white;
 }
 
 .gameout {

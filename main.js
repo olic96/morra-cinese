@@ -1,7 +1,7 @@
-playerName = prompt('Inserisci il tuo nome');
+playerName = prompt('Insert your name');
 
 while(!playerName) {
-   playerName = prompt('Inserisci il tuo nome');
+   playerName = prompt('Insert your name');
  };
 
 game = function() {
@@ -50,19 +50,19 @@ game = function() {
         ps_win = document.querySelector('.ps_win');
 
         if(playerChoice === cpuChoice) {
-            ps_win.textContent = 'Pareggio';
+            ps_win.textContent = 'Draw';
             return;
         }
 
         if(playerChoice === 'rock') {
             if(cpuChoice === 'scissors') {
-                ps_win.textContent = `${playerName} hai vinto!`;
+                ps_win.textContent = `${playerName} has won!`;
                 playerPT++;
                 endGame();
                 updateScore();
                 return;
             } else {
-                ps_win.textContent = 'CPU ha Vinto!';
+                ps_win.textContent = 'CPU has won!';
                 cpuPT++;
                 endGame();
                 updateScore();
@@ -72,13 +72,13 @@ game = function() {
 
         if(playerChoice === 'paper') {
             if(cpuChoice === 'scissors') {
-                ps_win.textContent = 'CPU ha Vinto!';
+                ps_win.textContent = 'CPU has won!';
                 cpuPT++;
                 endGame();
                 updateScore();
                 return;
             } else {
-                ps_win.textContent = `${playerName} hai vinto!`;
+                ps_win.textContent = `${playerName} has won!`;
                 playerPT++;
                 endGame();
                 updateScore();
@@ -88,13 +88,13 @@ game = function() {
 
         if(playerChoice === 'scissors') {
             if(cpuChoice === 'rock') {
-                ps_win.textContent = 'CPU ha Vinto!';
+                ps_win.textContent = 'CPU has won!';
                 cpuPT++;
                 endGame();
                 updateScore();
                 return;
             } else {
-                ps_win.textContent = `${playerName} hai vinto!`;
+                ps_win.textContent = `${playerName} has won!`;
                 playerPT++;
                 endGame();
                 updateScore();
@@ -129,7 +129,7 @@ game = function() {
             setTimeout(() => {
                 ps_winend.classList.add('gamein');
                 ps_winend.classList.remove('gameout');
-                ps_win_stop.textContent = `${playerName} hai vinto la partita!`;
+                ps_win_stop.textContent = `${playerName} won the game!`;
             }, 100);
         } else if (cpuPT === 5) {
             vs.classList.remove('gamein');
@@ -137,7 +137,7 @@ game = function() {
             setTimeout(() => {
                 ps_winend.classList.add('gamein');
                 ps_winend.classList.remove('gameout');
-                ps_win_stop.textContent = 'CPU ha vinto la partita!';
+                ps_win_stop.textContent = 'CPU won the game!';
             }, 100);
         }
     };
